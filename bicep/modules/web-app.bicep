@@ -2,9 +2,7 @@ param name string
 param location string
 param appServicePlanId string
 
-@secure()
 param appInsightsConnectionString string
-
 param keyVaultUri string
 param tags object
 

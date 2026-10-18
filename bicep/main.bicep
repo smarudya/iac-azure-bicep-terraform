@@ -24,7 +24,8 @@ var commonTags = union(tags, {
   managedBy: 'bicep'
 })
 
-module resourceGroup 'modules/resource-group.bicep' = {
+// Module symbolic name must NOT be `resourceGroup` — that shadows az.resourceGroup().
+module rgDeploy 'modules/resource-group.bicep' = {
   name: 'resource-group'
   params: {
     name: resourceGroupName
@@ -42,7 +43,7 @@ module logAnalytics 'modules/log-analytics.bicep' = {
     tags: commonTags
   }
   dependsOn: [
-    resourceGroup
+    rgDeploy
   ]
 }
 
@@ -67,7 +68,7 @@ module appServicePlan 'modules/app-service-plan.bicep' = {
     tags: commonTags
   }
   dependsOn: [
-    resourceGroup
+    rgDeploy
   ]
 }
 
@@ -80,7 +81,7 @@ module keyVault 'modules/key-vault.bicep' = {
     tags: commonTags
   }
   dependsOn: [
-    resourceGroup
+    rgDeploy
   ]
 }
 
