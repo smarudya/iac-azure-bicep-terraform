@@ -76,10 +76,3 @@ Run `scripts/validate.ps1` on PowerShell or `scripts/validate.sh` on Bash. The s
 - Public endpoints are retained for demo deployability. Use private endpoints, access restrictions, and private DNS for production.
 - **Cost warning:** App Service, Application Insights, and Log Analytics can incur ongoing charges. Review current Azure pricing, telemetry volume, and the selected SKU; destroy demonstration resources when finished.
 
-## Deloitte Senior Cloud Software Engineer — JD 48802 mapping
-
-- **Azure engineering:** App Service, Key Vault, Azure Monitor, and identity-first security.
-- **Infrastructure as Code:** equivalent modular Bicep and declarative Terraform implementations.
-- **DevOps:** pull-request validation, deterministic configuration, environment parameters, and no production apply from CI.
-- **Operational excellence:** centralized observability, resource tagging, documented trade-offs, outputs, and production-hardening guidance.
-- **Security:** least-privilege RBAC, managed identity, TLS enforcement, secret-free examples, and protected infrastructure state.
