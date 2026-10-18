@@ -3,7 +3,7 @@ param location string
 param environment string
 param tags object
 
-var skuName = environment == 'prod' ? 'P0v3' : 'B1'
+var skuName = environment == 'prod' ? 'P1v3' : 'B1'
 
 resource plan 'Microsoft.Web/serverfarms@2023-12-01' = {
   name: name

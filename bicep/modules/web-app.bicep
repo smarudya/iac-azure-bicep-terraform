@@ -24,7 +24,6 @@ resource webApp 'Microsoft.Web/sites@2023-12-01' = {
       ftpsState: 'Disabled'
       http20Enabled: true
       minTlsVersion: '1.2'
-      netFrameworkVersion: 'v8.0'
       linuxFxVersion: 'DOTNETCORE|8.0'
       appSettings: [
         {
@@ -43,4 +42,4 @@ resource webApp 'Microsoft.Web/sites@2023-12-01' = {
 output id string = webApp.id
 output name string = webApp.name
 output defaultHostname string = webApp.properties.defaultHostName
-output principalId string = webApp.identity.principalId
+output principalId string = webApp.identity!.principalId
