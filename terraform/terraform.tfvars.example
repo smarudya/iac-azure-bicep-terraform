@@ -1,0 +1,9 @@
+application_name = "cloudapp"
+environment      = "dev"
+location         = "eastus"
+unique_suffix    = "replace1"
+
+tags = {
+  owner      = "replace-with-team-name"
+  costCenter = "replace-with-cost-center"
+}
