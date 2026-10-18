@@ -31,9 +31,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Setup Bicep
-        uses: azure/setup-bicep@v2
-        with:
-          version: v0.33.93
+      # ubuntu-latest runner image already includes the Bicep CLI
+      - name: Bicep version
+        run: bicep --version
       - name: Build Bicep
-        run: bicep build ./bicep/main.bicep --stdout > /dev/null
+        run: bicep build ./bicep/main.bicep
