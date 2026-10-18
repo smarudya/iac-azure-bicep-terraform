@@ -1,0 +1,30 @@
+# Terraform working data and state
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+*.tfplan
+crash.log
+crash.*.log
+.terraform.lock.hcl
+terraform/backend.tf
+terraform/terraform.tfvars
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Generated Bicep output
+bicep/main.json
+
+# Local settings and credentials
+.env
+.env.*
+!.env.example
+local.settings.json
+*.local.json
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
